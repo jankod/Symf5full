@@ -1,0 +1,24 @@
+{#{#}{#if appSidebar}}#}
+<!-- BEGIN Left Aside -->
+<aside class="page-sidebar">
+
+	{% include "include/_logo.html.twig" %}
+
+	<!-- BEGIN PRIMARY NAVIGATION -->
+	<nav id="js-primary-nav" class="primary-nav" role="navigation">
+
+		{%  include "include/_nav-filter.html.twig" %}
+
+		{%  include "include/_nav-info-card.html.twig" %}
+		{%  include "include/_nav.html.twig" %}
+		{%  include "include/_nav-filter-msg.html.twig" %}
+	</nav>
+	<!-- END PRIMARY NAVIGATION -->
+
+	<!-- NAV FOOTER -->
+	{%  include "include/_nav-footer.html.twig" %}
+	<!-- END NAV FOOTER -->
+
+</aside>
+<!-- END Left Aside -->
+{#{{/if}}#}
