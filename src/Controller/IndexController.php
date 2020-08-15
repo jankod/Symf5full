@@ -6,17 +6,10 @@ namespace App\Controller;
 
 use App\Entity\Task;
 use App\Form\TaskType;
-use Doctrine\DBAL\Types\StringType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Console\Input\StringInput;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\SubmitButton;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\String\AbstractString;
-use Symfony\Component\String\UnicodeString;
 
 /**
  * Class IndexController
@@ -29,18 +22,19 @@ class IndexController extends AbstractController
     /**
      * @param Request $request
      * @return Response
-     * @Route("/")
+     * @Route("/", name="index")
      */
-    public function index2(Request $request)
+    public function index(Request $request)
     {
         return $this->render('index.html.twig');
     }
+
     /**
      * @param Request $request
      * @return Response
      * @Route("/2")
      */
-    public function index(Request $request)
+    public function index2(Request $request)
     {
 
         $task = new Task();
